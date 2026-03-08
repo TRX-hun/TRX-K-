@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRX | الموقع الرسمي</title>
+    <style>
+        :root { --bg: #000000; --green: #2ecc71; --card: rgba(15, 15, 19, 0.9); --accent: #00e5ff; }
+        body { background-color: var(--bg); color: white; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; text-align: center; overflow-x: hidden; }
+        #star-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #000; }
+        header { padding: 15px 5%; border-bottom: 2px solid var(--green); background: rgba(0,0,0,0.8); display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(5px); position: sticky; top: 0; z-index: 1000; }
+        .logo-text { font-size: 26px; font-weight: bold; }
+        .logo-text span { color: var(--green); text-shadow: 0 0 10px var(--green); }
+        .logo-img { width: 50px; height: 50px; border-radius: 10px; border: 2px solid var(--green); }
+        .container { max-width: 600px; margin: 20px auto; padding: 0 15px; }
+        .dns-section { background: var(--card); border-radius: 20px; padding: 20px; border: 2px solid #ff4500; margin-bottom: 30px; box-shadow: 0 0 15px rgba(255, 69, 0, 0.3); }
+        .dns-btn { display: inline-block; padding: 15px 30px; background: #ff4500; color: white; text-decoration: none; border-radius: 12px; font-weight: bold; margin-top: 15px; }
+        .tab-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+        .tab-btn { flex: 1; padding: 15px; border-radius: 15px; border: none; cursor: pointer; font-weight: bold; font-size: 16px; background: #222; color: #888; transition: 0.4s; }
+        .tab-btn.active { background: #5865F2; color: white; box-shadow: 0 0 15px #5865F2; }
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+        .card { background: var(--card); border-radius: 15px; padding: 12px; border: 1px solid #333; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+        .card-info { display: flex; align-items: center; gap: 12px; text-align: right; }
+        .card-img { width: 55px; height: 55px; border-radius: 12px; object-fit: cover; border: 1px solid #444; }
+        .install-btn { padding: 10px 18px; background: transparent; border: 1.5px solid var(--green); color: var(--green); text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div id="star-container"></div>
+<header>
+    <div class="logo-text">T<span>RX</span></div>
+    <img src="https://raw.githubusercontent.com/TRX-hun/TRX-/refs/heads/main/B9157165-BC17-449D-8098-EE9EB3E4A616.png" class="logo-img">
+</header>
+
+<div class="container">
+    <div class="dns-section">
+        <h3 style="margin:0; color:#ff4500;">DNS حق كيساين وايساين</h3>
+        <a href="https://github.com/dns-khoindvn/top-country-stats/releases/download/DNS/khoindvn.io.vn.mobileconfig" class="dns-btn">Download DNS Profile</a>
+    </div>
+
+    <div class="tab-container">
+        <button class="tab-btn active" onclick="switchTab('ksign-tab', this)">KSign</button>
+        <button class="tab-btn" onclick="switchTab('esign-tab', this)">ESign</button>
+        <button class="tab-btn" onclick="switchTab('scarlet-tab', this)">Scarlet</button>
+    </div>
+
+    <div id="ksign-tab" class="content-section active"></div>
+    <div id="esign-tab" class="content-section"></div>
+    <div id="scarlet-tab" class="content-section">
+        <div class="card"><div class="card-info"><img src="https://www.mediafire.com/file/k6fbd95mr7amkac/IMG_2265.jpeg/file" class="card-img"><h4>Scarlet Airlines</h4></div><a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/davidum19/Scarlet-OTA/refs/heads/main/airlines/manifest.plist" class="install-btn">INSTALL</a></div>
+        <div class="card"><div class="card-info"><img src="https://www.mediafire.com/file/k6fbd95mr7amkac/IMG_2265.jpeg/file" class="card-img"><h4>Scarlet Oilwel</h4></div><a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/davidum19/Scarlet-OTA/refs/heads/main/oilwel/manifest.plist" class="install-btn">INSTALL</a></div>
+    </div>
+</div>
+
+<script>
+    const ksignData = ["https://api.khoindvn.io.vn/UM2Mcz", "https://api.khoindvn.io.vn/enw3mG", "https://api.khoindvn.io.vn/03zH0o", "https://api.khoindvn.io.vn/xuuKqO", "https://api.khoindvn.io.vn/QdVVh3", "https://api.khoindvn.io.vn/t1UK1D", "https://api.khoindvn.io.vn/NU8PP6", "https://api.khoindvn.eu.org/XSCvQT", "https://api.khoindvn.io.vn/g65UJy", "https://api.khoindvn.io.vn/ZsgCVX", "https://api.khoindvn.io.vn/VNNlkL", "https://api.khoindvn.io.vn/9VDZ4Y", "https://api.khoindvn.io.vn/IUurbX", "https://api.khoindvn.io.vn/IUurbX", "https://api.khoindvn.io.vn/5PBonm", "https://api.khoindvn.io.vn/1H9iee", "https://api.khoindvn.io.vn/qYiNnB", "https://api.khoindvn.io.vn/xwgru5", "https://api.khoindvn.io.vn/KYD1nK", "https://api.khoindvn.io.vn/ZNciX8", "https://api.khoindvn.io.vn/nBQF8h", "https://api.khoindvn.io.vn/5dujHz", "https://api.khoindvn.io.vn/hZ8MlI", "https://api.khoindvn.io.vn/Fdty3X", "https://api.khoindvn.io.vn/AK7usE", "https://api.khoindvn.io.vn/6DNLtD", "https://api.khoindvn.io.vn/j7XAya", "https://api.khoindvn.io.vn/qNkRtG", "https://api.khoindvn.io.vn/qNkRtG", "https://api.khoindvn.io.vn/mTt9ip", "https://api.khoindvn.io.vn/RX7IAf", "https://api.khoindvn.io.vn/tGeKc0", "https://api.khoindvn.io.vn/Deq7RD", "https://api.khoindvn.io.vn/kcvpWe"];
+    
+    function renderCards(data, containerId, img, titlePrefix) {
+        const container = document.getElementById(containerId);
+        data.forEach((link, index) => {
+            container.innerHTML += `<div class="card"><div class="card-info"><img src="${img}" class="card-img"><h4>${titlePrefix} #${index + 1}</h4></div><a href="${link}" class="install-btn">INSTALL</a></div>`;
+        });
+    }
+
+    renderCards(ksignData, 'ksign-tab', "https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_2016.jpeg", 'KSign');
+    
+    // إضافة تطبيقات ESign + ESign Forever
+    document.getElementById('esign-tab').innerHTML = `
+        <div class="card"><div class="card-info"><img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_2017.jpeg" class="card-img"><h4>ESign 1</h4></div><a href="https://api.khoindvn.io.vn/RoAzoJ" class="install-btn">INSTALL</a></div>
+        <div class="card"><div class="card-info"><img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_2017.jpeg" class="card-img"><h4>ESign 2</h4></div><a href="https://api.khoindvn.io.vn/mJoVMn" class="install-btn">INSTALL</a></div>
+        <div class="card"><div class="card-info"><img src="https://www.mediafire.com/view/yi27e18icxnp5x6/IMG_2264.jpeg/file" class="card-img"><h4>ESign Forever</h4></div><a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/davidum19/Esign-OTA/refs/heads/main/forever/manifest.plist" class="install-btn">INSTALL</a></div>
+    `;
+
+    function switchTab(tabId, btn) {
+        document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        btn.classList.add('active');
+    }
+</script>
+</body>
+</html>
