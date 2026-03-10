@@ -956,7 +956,7 @@ local SetProps, SetChildren, InsertTheme, Create do
 		end
 	end
 	
-	pcall(Save, "FR_HUB.json")
+	pcall(Save, "TRX_HUB.json")
 end
 
 local Funcs = {} do
@@ -1113,7 +1113,7 @@ local GetFlag, SetFlag, CheckFlag do
 end
 
 local ScreenGui = Create("ScreenGui", CoreGui, {
-	Name = "FR HUB",
+	Name = "TRX HUB",
 }, {
 	Create("UIScale", {
 		Scale = UIScale,
@@ -1406,7 +1406,7 @@ function redzlib:SetTheme(NewTheme)
 	if not VerifyTheme(NewTheme) then return end
 	
 	redzlib.Save.Theme = NewTheme
-	SaveJson("FR_HUB.json", redzlib.Save)
+	SaveJson("TRX_HUB.json", redzlib.Save)
 	Theme = redzlib.Themes[NewTheme]
 	
 	Comnection:FireConnection("ThemeChanged", NewTheme)
@@ -1777,13 +1777,13 @@ function redzlib:MakeWindow(Configs)
 	ConnectSave(ControlSize1, function()
 		if not Minimized then
 			redzlib.Save.UISize = {MainFrame.Size.X.Offset, MainFrame.Size.Y.Offset}
-			SaveJson("FR_HUB.json", redzlib.Save)
+			SaveJson("TRX_HUB.json", redzlib.Save)
 		end
 	end)
 	
 	ConnectSave(ControlSize2, function()
 		redzlib.Save.TabSize = MainScroll.Size.X.Offset
-		SaveJson("FR_HUB.json", redzlib.Save)
+		SaveJson("TRX_HUB.json", redzlib.Save)
 	end)
 	
 	local ButtonsFolder = Create("Folder", TopBar, {
