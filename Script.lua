@@ -5178,7 +5178,7 @@ ShowIntro(function()
             
             pcall(function()
                 local playerBag = LocalPlayer:FindFirstChild("PlayersBag")
-                if playerBag and playerBag:FindFirstChild("RPName") and playerBag.RPName.Value == "FR HUB IS HERE" then
+                if playerBag and playerBag:FindFirstChild("RPName") and playerBag.RPName.Value == "TRX HUB IS HERE" then
                     success = true 
                 end
             end)
